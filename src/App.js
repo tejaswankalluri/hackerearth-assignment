@@ -6,22 +6,29 @@ import Total from "./components/Total";
 function App() {
     const [items, setItems] = useState(
         data.map((item) => {
-            return { ...item, qty: 1, iniprice: item.price };
+            return { ...item, qty: 1 };
         })
     );
     return (
         <>
-            <table>
-                <tr>
-                    <th>items</th>
-                    <th>qty</th>
-                    <th>price</th>
-                </tr>
-                {items.map((item, key) => (
-                    <Item item={item} setItem={setItems} idx={key} key={key} />
-                ))}
-            </table>
-            <Total items={items} />
+            <div className="flexb">
+                <table>
+                    <tr>
+                        <th>items</th>
+                        <th>qty</th>
+                        <th>price</th>
+                    </tr>
+                    {items.map((item, key) => (
+                        <Item
+                            item={item}
+                            setItem={setItems}
+                            idx={key}
+                            key={key}
+                        />
+                    ))}
+                </table>
+                <Total items={items} />
+            </div>
         </>
     );
 }

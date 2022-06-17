@@ -21,11 +21,13 @@ const Total = ({ items }) => {
     }, [items]);
     return (
         <>
-            <h2>Your total bill</h2>
-            <p>price : {price}</p>
-            <p>discount : {discount}</p>
+            <div>
+                <h2>Your total bill</h2>
+                <p>price : {price}</p>
+                <p>discount : {discount}</p>
 
-            <h3>total bill : {total}</h3>
+                <h3>total bill : {total}</h3>
+            </div>
         </>
     );
 };

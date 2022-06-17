@@ -27,5 +27,12 @@ const a = [
         img: "https://img.icons8.com/office/30/undefined/new.png",
         discount: 8,
     },
+    {
+        itemid: "83",
+        name: "item5",
+        price: 500,
+        img: "https://img.icons8.com/office/30/undefined/new.png",
+        discount: 8,
+    },
 ];
 export default a;

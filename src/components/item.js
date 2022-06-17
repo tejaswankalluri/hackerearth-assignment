@@ -7,7 +7,7 @@ const Item = ({ item, setItem, idx }) => {
                     ? {
                           ...item,
                           qty: item.qty + 1,
-                          price: item.iniprice * (item.qty + 1),
+                          price: (item.price / item.qty) * (item.qty + 1),
                       }
                     : item;
             });
@@ -22,7 +22,7 @@ const Item = ({ item, setItem, idx }) => {
                     ? {
                           ...item,
                           qty: item.qty - 1,
-                          price: item.iniprice * (item.qty - 1),
+                          price: (item.price / item.qty) * (item.qty - 1),
                       }
                     : item;
             });
